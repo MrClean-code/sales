@@ -19,17 +19,17 @@ public class FinanceController {
         return priceService.getAllPrices();
     }
 
-    @PostMapping("/prices")
+    @PostMapping("/new/price")
     public Price createPrice(@RequestBody Price price) {
         return priceService.createPrice(price);
     }
 
-    @PutMapping("/prices/{id}")
+    @PutMapping("/prices/{id}/update")
     public PriceDto updatePrice(@PathVariable Long id, @RequestBody Price newPrice) {
         return priceService.updatePrice(id, newPrice);
     }
 
-    @DeleteMapping("/prices/{id}")
+    @DeleteMapping("/prices/{id}/delete")
     public String deletePrice(@PathVariable Long id) {
         return priceService.deletePrice(id);
     }
