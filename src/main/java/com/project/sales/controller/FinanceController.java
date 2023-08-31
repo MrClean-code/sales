@@ -24,12 +24,12 @@ public class FinanceController {
         return priceService.createPrice(price);
     }
 
-    @PutMapping("/prices/{id}/update")
+    @PutMapping("/price/{id}/update")
     public PriceDto updatePrice(@PathVariable Long id, @RequestBody Price newPrice) {
         return priceService.updatePrice(id, newPrice);
     }
 
-    @DeleteMapping("/prices/{id}/delete")
+    @DeleteMapping("/price/{id}/delete")
     public String deletePrice(@PathVariable Long id) {
         return priceService.deletePrice(id);
     }
